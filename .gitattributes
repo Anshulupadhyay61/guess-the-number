@@ -1,2 +1,21 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+'''
+we are going to write a program that generates a random
+number and asks the user to guess it 
+'''
+
+import random
+n = random.randint(1, 100)
+a = -1
+guesses = 0
+while(a != n):
+    guesses += 1
+    a = int(input("guess a number: "))
+    if(a>n):
+        print("lower number please")
+    elif(a<n):
+        print("higher number please")
+        guesses +=1
+
+print(f"\nkya re chutiye!\nyou have guesssed the number {n} correctly in {guesses} attempts\n")
